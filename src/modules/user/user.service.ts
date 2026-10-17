@@ -14,11 +14,11 @@ export class UserService {
     const newUser = await this.userModel.create({
       firstName: data.firstName,
       lastName: data.lastName,
+      age: data.age,
       email: data.email,
       password: data.password,
       phone: data.phone,
       role: data.role,
-      age: data.age,
     });
     return newUser;
   }
