@@ -9,6 +9,7 @@ import {
   IsEnum,
   Matches,
   IsStrongPassword,
+  IsNumber,
 } from 'class-validator';
 
 export enum UserRole {
@@ -51,4 +52,8 @@ export class CreateUserDto {
   @IsOptional()
   @IsEnum(UserRole)
   role?: UserRole;
+
+  @IsNumber()
+  @IsNotEmpty()
+  age: number;
 }
